@@ -1,0 +1,67 @@
+<div class="container-fluid page">
+  <div class="d-flex p-3 mt-2">
+    <h1></h1>
+  </div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content position-relative mt-3 mx-5">
+      <div class="nav justify-content-end">
+        <button
+          class="btn btn-outline-secondary"
+          [routerLink]="['/cliente/contrato', id]"
+        >
+          <i class="fas fa-arrow-circle-left">Volver</i>
+        </button>
+      </div>
+      <br />
+      <br />
+      <div class="container">
+        <div class="row fs-6" *ngIf="contrato">
+          <div class="col-md-7 mx-auto">
+            <div class="card" style="width: 100%">
+              <div class="card-header text-center">
+                <h1>
+                  Informacion del Contrato:
+                  {{ contratoActivo(contrato.estadoContrato) }}
+                </h1>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>ID: </b>{{ contrato.id }}</li>
+                <li class="list-group-item">
+                  <b>Descripcion: </b>{{ contrato.descripcion }}
+                </li>
+                <li class="list-group-item">
+                  <b>Direccion: </b>{{ contrato.direccion }}
+                </li>
+                <li class="list-group-item">
+                  <b>Distrito: </b>{{ contrato.distritoDireccion }}
+                </li>
+                <li class="list-group-item">
+                  <b>Estado Contrato: </b>{{ contrato.estadoContrato }}
+                </li>
+                <li class="list-group-item">
+                  <b>Fecha Creacion: </b>{{ contrato.fecCreacion }}
+                </li>
+                <li class="list-group-item">
+                  <b>Fecha Finalizacion: </b>{{ contrato.fecFinalizacion }}
+                </li>
+                <li class="list-group-item">
+                  <b>Modo de Pago: </b>{{ contrato.modDePago }}
+                </li>
+                <li class="list-group-item">
+                  <b>Referencia Direccion: </b>{{ contrato.refDireccion }}
+                </li>
+                <li class="list-group-item">
+                  <b>Restricciones: </b>{{ contrato.restricciones }}
+                </li>
+                <li class="list-group-item">
+                  <b>Tasa de Mora: </b>{{ contrato.tasaDeMora }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container contenedor mt-5"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+table thead{
+    background-color: #198754;        
+}
+.btn{
+    margin-right: auto;
+    margin-left: auto;
+    background-size: 100% 100%;
+    border: none;
+    cursor: pointer;
+    padding: 15px 20px;
+}

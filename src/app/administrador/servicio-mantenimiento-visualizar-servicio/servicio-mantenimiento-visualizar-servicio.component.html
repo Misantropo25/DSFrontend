@@ -1,0 +1,35 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Ver Servicio</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/servicios">
+                <i class="fas fa-arrow-circle-left">Volver</i>
+            </button>
+        </div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row fs-6" *ngIf="servicio">
+              <div class="col-md-7 mx-auto">
+                  <div class="card" style="width: 100%;">
+                      <div class="card-header text-center">
+                        Informacion del Servicio: {{servicio.nombreServicio }}
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>ID: </b>{{servicio.id}}</li>
+                        <li class="list-group-item"><b>Costo Servicio: </b>{{servicio.costoServicio}}</li>
+                        <li class="list-group-item"><b>Descripcion: </b>{{servicio.descripcion}}</li>
+                        <li class="list-group-item"><b>Fecha Creacion: </b>{{servicio.fecCreacion}}</li>
+                        <li class="list-group-item"><b>Fecha Expiracion: </b>{{servicio.fecExpiracion}}</li>
+                      </ul>
+                      
+                    </div>
+              </div>
+          </div>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+  

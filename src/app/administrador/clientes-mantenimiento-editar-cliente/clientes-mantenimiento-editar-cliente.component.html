@@ -1,0 +1,139 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Editar Cliente</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/clientes">
+              <i class="far fa-plus-square"> Volver</i>
+            </button>
+        </div>
+  
+        <br />
+        <br />
+        <div class="s">
+            <form class="fs-6">
+                <div class="form-outline mb-4">
+                    <input disabled type="number" id="id" class="form-control" value={{cliente.id}} #id />
+                    <label class="form-label" for="id">Id Cliente</label>
+                </div>
+                <div class="form-outline mb-4">
+                <input type="text" id="nombre" class="form-control" value="{{cliente.nombre}}" #nombre />
+                <label class="form-label" for="nombre">Nombre</label>
+                </div>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                    <input
+                        type="text"
+                        id="apePaterno"
+                        class="form-control"
+                        value="{{cliente.apePaterno}}"
+                        #apePaterno
+                    />
+                    <label class="form-label" for="apePaterno"
+                        >Apellido Paterno</label
+                    >
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="form-outline">
+                    <input
+                        type="text"
+                        id="apeMaterno"
+                        class="form-control"
+                        value="{{cliente.apeMaterno}}"
+                        #apeMaterno
+                    />
+                    <label class="form-label" for="apeMaterno"
+                        >Apellido Materno</label
+                    >
+                    </div>
+                </div>
+                </div>
+        
+                <!-- Sexo input-->
+                <div class="input-group mb-3">
+                <select class="form-select" id="sexo" value="{{cliente.sexo}}" #sexo>
+                    <option disabled selected>Sexo</option>
+                    <option id="sexo" value="M">Masculino</option>
+                    <option id="sexo" value="F">Femenino</option>
+                    <option id="sexo" value="O">Otro</option>
+                </select>
+                <label class="input-group-text" for="sexo">Seleccione</label>
+                </div>
+                <br />
+        
+                <!-- Tipo de Documento de identificacion -->
+                <div class="input-group mb-3">
+                <select class="form-select" id="tipDocIdentificacion" value="{{cliente.tipDocIdentificacion}" #tipDocIdentificacion>
+                    <option selected>Tipo de Documento de identificacion</option>
+                    <option id="tipDocIdentificacion" value="DNI">DNI</option>
+                    <option id="tipDocIdentificacion" value="null">Proximamente...</option>
+                </select>
+                <label class="input-group-text" for="tipDocIdentificacion"
+                    >Seleccione</label
+                >
+                </div>
+                <br />
+        
+                <!-- DNI input -->
+                <div class="form-outline mb-4">
+                <input type="text" id="dni" class="form-control" value="{{cliente.dni}}" #dni />
+                <label class="form-label" for="dni">DNI</label>
+                </div>
+        
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                <input type="text" id="email" class="form-control" value="{{cliente.email}}" #email/>
+                <label class="form-label" for="email">Email</label>
+                </div>
+        
+                <!-- Number input -->
+                <div class="form-outline mb-4">
+                <input type="text" id="numTelefono" class="form-control" value="{{cliente.numTelefono}}" #numTelefono/>
+                <label class="form-label" for="numTelefono"
+                    >Numero de Telefono</label
+                >
+                </div>
+        
+                <!-- Nacionalidad input -->
+                <div class="form-outline mb-4">
+                <input type="text" id="nacionalidad" class="form-control" value="{{cliente.nacionalidad}}" #nacionalidad/>
+                <label class="form-label" for="nacionalidad">Nacionalidad</label>
+                </div>
+        
+                <!-- Direccion input -->
+                <div class="form-outline mb-4">
+                <input type="text" id="direccion" class="form-control" value="{{cliente.direccion}}" #direccion/>
+                <label class="form-label" for="direccion">Direccion</label>
+                </div>
+        
+                <!-- Usuario input -->
+                <div class="form-outline mb-4">
+                <input type="text" id="nomUsuario" class="form-control" value="{{cliente.nomUsuario}}" #nomUsuario/>
+                <label class="form-label" for="nomUsuario"
+                    >Nombre de Usuario</label
+                >
+                </div>
+        
+                <!-- Contraseña input -->
+                <div class="form-outline mb-4">
+                <input type="text" id="contrasenia" class="form-control" value="{{cliente.contrasenia}}" #contrasenia/>
+                <label class="form-label" for="contrasenia">Contraseña</label>
+                </div>
+        
+                <!-- Submit button -->
+                <a href="/inicioAdmin/id/clientes" class="btn btn-primary btn-lg mb-4" tabindex="-1" role="button" (click)="editarCliente(id.value, dni.value, apePaterno.value, apeMaterno.value, sexo.value, tipDocIdentificacion.value, email.value, numTelefono.value, nacionalidad.value, direccion.value, nomUsuario.value, nombre.value, contrasenia.value)"> Actualizar</a>
+        
+            </form>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,43 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Nuevo Ticket</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end">
+          <button
+            class="btn btn-outline-secondary"
+            routerLink="/inicioAdmin/id/tickets"
+          >
+            <i class="fas fa-arrow-circle-left"> Volver</i>
+          </button>
+        </div>
+  
+        <br />
+        <br />
+        <form class="fs-6">
+          <div class="form-outline mb-4">
+            <input type="text" id="descripcionTicket" class="form-control" #descripcionTicket />
+            <label class="form-label" for="descripcionTicket">Descripcion Ticket</label>
+          </div>
+          <!-- Tipo de Solicitud -->
+          <div class="input-group mb-3">
+            <select class="form-select" id="tipoDeSolicitud" #tipoDeSolicitud>
+              <option disabled selected>Tipo de Solicitud</option>
+              <option id="tipoDeSolicitud" value="Tecnica">Tecnica</option>
+              <option id="tipoDeSolicitud" value="Reclamo">Reclamo</option>
+              <option id="tipoDeSolicitud" value="Consulta">Consulta</option>
+            </select>
+            <label class="input-group-text" for="tipoDeSolicitud"
+              >Seleccione</label
+            >
+          </div>
+          <br />
+          
+          <!-- Submit button -->
+          <a href="/inicioAdmin/id/tickets" class="btn btn-primary btn-lg mb-4" tabindex="-1" role="button" (click)="crearTicket(descripcionTicket.value,tipoDeSolicitud.value)"> Registrar</a>
+    
+        </form>
+      </div>
+    </div>
+  </div>
+  
+

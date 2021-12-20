@@ -1,0 +1,90 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Editar Pago</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/pagos">
+                <i class="fas fa-arrow-circle-left"> Volver</i>
+            </button>
+        </div>
+  
+        <br />
+        <br />
+        <div class="s">
+            <form class="fs-6">
+                <!-- monto input -->
+                <div class="form-outline mb-4">
+                    <input type="number" id="monto" value={{pago.monto}} class="form-control" #monto />
+                    <label class="form-label" for="monto">Monto del Pago</label>
+                </div>
+
+                <!-- Estado Pago identificacion -->
+                <div class="input-group mb-3">
+                    <select class="form-select" id="estadoPago" value="{{pago.estadoPago}" #estadoPago>
+                        <option disabled selected>{{pago.estadoPago}}</option>
+                        <option id="estadoPago" value="false">Falta pagar</option>
+                        <option id="estadoPago" value="true">Ya se pago</option>
+                    </select>
+                    <label class="input-group-text" for="estadoPago"
+                        >Seleccione el estado del pago</label
+                    >
+                    </div>
+                    <br />
+
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="form-outline">
+                        <input
+                        disabled
+                            type="text"
+                            id="fechaLimitePago"
+                            class="form-control"
+                            value="{{pago.fechaLimitePago}}"
+                            #fechaLimitePago
+                        />
+                        <label class="form-label" for="fechaLimitePago"
+                            >Fecha limite para realizar el pago</label
+                        >
+                        </div>
+                    </div>
+            
+                    <div class="col">
+                        <div class="form-outline">
+                        <input
+                            type="date"
+                            id="fechaPago"
+                            class="form-control"
+                            value="{{pago.fechaPago}}"
+                            #fechaPago
+                        />
+                        <label class="form-label" for="fechaPago"
+                            >Fecha en que se realizo el pago</label
+                        >
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="number" id="mora" value={{pago.mora}} class="form-control" #mora />
+                        <label class="form-label" for="mora">Mora registrada en el pago</label>
+                    </div>
+
+                <div class="form-outline mb-4">
+                    <input disabled type="text" id="correspondeContrato" class="form-control" #correspondeContrato />
+                    <label class="form-label" for="correspondeContrato">Corresponde Contrato</label>
+                </div>
+
+                <!-- Submit button -->
+                <a href="/inicioAdmin/id/pagos" class="btn btn-primary btn-lg mb-4" tabindex="-1" role="button" (click)="editarPago(monto.value,estadoPago.value,fechaPago.value,mora.value)"> Modificar Pago</a>
+        
+            </form>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  

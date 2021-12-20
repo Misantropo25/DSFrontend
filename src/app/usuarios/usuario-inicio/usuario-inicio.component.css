@@ -1,0 +1,72 @@
+
+.caja{
+    background-color: #aaa;
+    border-style: solid;
+    border-color: black;
+}
+
+.interfazP1{
+    /* flex-flow: column;
+    overflow: hidden; */
+    /* background-color: black; */
+    width: auto;
+    height: 500px;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+}
+
+
+
+.carousel-inner{
+    display: inline-block  ;
+}
+.carousel-inner img{
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+} 
+
+
+
+
+
+
+.title-interfazP2{
+    margin: 0 2% 6% 0;
+}
+
+.card img{
+    height: 220px;
+    width: auto;
+    object-fit: cover;
+}
+
+.card{
+    height: 400px;
+    margin-left: 6%;
+}
+
+.interfazP2{
+    text-align: center;
+}
+
+
+
+
+.interfazP3{
+    text-align: center;
+    margin-top: 5%;
+    width: auto;
+    height: auto;
+    margin-left: 15%;
+    margin-right: 10%;   
+}
+
+.botonFinal{
+    margin-top: 3%;
+    padding-bottom: 5%;
+    height: 150px;
+}
+
+
+

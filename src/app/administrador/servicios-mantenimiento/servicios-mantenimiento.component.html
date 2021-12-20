@@ -1,0 +1,56 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Servicios</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content position-relative mt-3 mx-5">
+      <div class="nav justify-content-end ">
+          <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/agregarServicio">
+            <i class="far fa-plus-square"> Agregar Nuevo Servicio</i>
+          </button>
+      </div>
+
+      <br />
+      <br />
+      <table class="table table-hover fs-6">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre Servicio</th>
+            <th scope="col">Costo Servicio</th>
+            <th scope="col">Fecha Creacion</th>
+            <th scope="col">Ver</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let servicio of lista">
+            <td>{{ servicio.id }}</td>
+            <td>
+              {{
+                servicio.nombreServicio
+              }}
+            </td>
+            <td>{{ servicio.costoServicio }}</td>
+            <td>{{ servicio.fecCreacion }}</td>
+            <td>
+              <a [routerLink]="['/inicioAdmin/id/visualizarServicio',servicio.id]"><button class="btn btn-outline-primary">
+                <i class="far fa-eye"></i> Ver
+              </button></a>
+            </td>
+            <td>
+              <a [routerLink]="['/inicioAdmin/id/editarServicio',servicio.id]"><button class="btn btn-outline-warning" >
+                <i class="far fa-edit"></i> Editar
+              </button></a>
+            </td>
+            <td>
+              <a href="/inicioAdmin/id/servicios"><button  (click)="eliminarServicio(servicio.id)" class="btn btn-outline-danger">
+                <i class="far fa-trash-alt"></i> Eliminar
+              </button>
+            </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

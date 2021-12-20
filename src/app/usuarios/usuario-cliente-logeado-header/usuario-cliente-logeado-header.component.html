@@ -1,0 +1,36 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="container-fluid">
+     <a class="navbar-brand" routerLink="/cliente/personal"
+     routerLinkActive="active"><img src="../../../assets/images/usuario/intInicio/inpecable.png" width="100" alt="..."></a>
+     
+     <div class="collapse navbar-collapse" id="navbarScroll">
+       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/cliente/personal',id]"
+          routerLinkActive="active">Informacion Personal</a>
+        </li>
+         <li class="nav-item">
+           <a class="nav-link" [routerLink]="['/cliente/contrato',id]"
+           >Contratos</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" [routerLink]="['/cliente/planes',id]"
+           >Planes</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" [routerLink]="['/cliente/tickets',id]"
+           >Tickets</a>
+         </li>
+       </ul>
+       <a class="nav-link"><img width="50px" height="50px" src="../../../assets/images/cliente/IconoSL.png" alt="...">
+        {{cliente.nombre}}
+        </a>
+        <a routerLink="/login"
+      >
+        <button class="btn btn-outline-warning" >SALIR</button>
+      </a>
+     </div>
+   </div>
+ </nav>
+ </header>

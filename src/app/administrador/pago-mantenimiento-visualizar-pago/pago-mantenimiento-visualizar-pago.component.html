@@ -1,0 +1,37 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Ver Pago</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/pagos">
+                <i class="fas fa-arrow-circle-left">Volver</i>
+            </button>
+        </div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row fs-6" *ngIf="pago">
+              <div class="col-md-7 mx-auto">
+                  <div class="card" style="width: 100%;">
+                      <div class="card-header text-center">
+                        Informacion de pago: {{pago.estadoPago}}
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item" ><b>ID: </b>{{pago.id}}</li>
+                        <li class="list-group-item"><b>Estado del pago: </b>{{ pago.estadoPago }}</li>
+                        <li class="list-group-item"><b>Fecha Limite de Pago: </b>{{pago.fechaLimitePago}}</li>
+                        <li class="list-group-item"><b>Fecha en que se realizo el Pago: </b>{{pago.fechaPago}}</li>
+                        <li class="list-group-item"><b>Monto: </b>s/{{pago.monto}}</li>
+                        <li class="list-group-item"><b>Mora Registrada: </b>s/{{pago.mora}}</li>
+                        <li class="list-group-item"><b>Corresponde a contrato: </b>{{pago.correspondeContrato.descripcion}}</li>
+                      </ul>
+                      
+                    </div>
+              </div>
+          </div>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+  

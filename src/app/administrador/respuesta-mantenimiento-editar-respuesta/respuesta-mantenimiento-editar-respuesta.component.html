@@ -1,0 +1,53 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Editar Respuesta</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/respuestas">
+                <i class="fas fa-arrow-circle-left"> Volver</i>
+            </button>
+        </div>
+  
+        <br />
+        <br />
+        <div class="s">
+            <form class="fs-6">
+                <!-- id input -->
+                <div class="form-outline mb-4">
+                    <input disabled type="number" id="id" value={{respuesta.id}} class="form-control" #id />
+                    <label class="form-label" for="id">Id</label>
+                </div>
+
+                <!-- contenido input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="contenido" value={{respuesta.contenido}} class="form-control" #contenido />
+                    <label class="form-label" for="contenido">Contenido de la respuesta</label>
+                </div>
+
+                <!-- empleadoRespondio input -->
+                <div class="form-outline mb-4">
+                    <input disabled type="text" id="empleadoRespondio" value={{respuesta.empleadoRespondio}} class="form-control" #empleadoRespondio />
+                    <label class="form-label" for="empleadoRespondio">Empleado que respondio</label>
+                </div>
+
+                <!-- ticketRespondio input -->
+                <div class="form-outline mb-4">
+                    <input disabled type="text" id="ticketRespondio" value={{respuesta.ticketRespondio}} class="form-control" #ticketRespondio />
+                    <label class="form-label" for="ticketRespondio">Ticket que respondio</label>
+                </div>
+
+               
+
+                <!-- Submit button -->
+                <a href="/inicioAdmin/id/respuestas" class="btn btn-primary btn-lg mb-4" tabindex="-1" role="button" (click)="editarRespuesta(id.value,contenido.value)"> Editar Respuesta</a>
+        
+            </form>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,53 @@
+
+
+
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Perfil</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content-data position-absolute text-center">
+      <div class="header" class="background">
+        <img class="avatar" src="../../../assets/user.jpg">
+        <h1 class="username">{{ empleado.nombre }}</h1>
+      </div>
+      <br><br><br><br><br><br>
+      <ul class=social >
+        <li>
+          <h1 class="datosperfil">Apellido Paterno:</h1>
+        </li>
+        <li>
+          <h1>{{ empleado.apePaterno }}</h1>
+        </li>
+        <li>
+          <h1 class="datosperfil">Apellido Materno:</h1>
+        </li>
+        <li>
+          <h1 >{{ empleado.apeMaterno }}</h1>
+        </li>
+      </ul>
+      <ul class=social >
+        <li>
+          <h1 class="datosperfil">Telefono:</h1>
+        </li>
+        <li>
+          <h1 >{{ empleado.numTelefono }}</h1>
+        </li>
+        <li>
+          <h1 class="datosperfil">Tipo de Documento:</h1>
+        </li>
+        <li>
+          <h1 >{{ empleado.tipDocIdentificacion }}</h1>
+        </li>
+        <li>
+          <h1 class="datosperfil">DNI:</h1>
+        </li>
+        <li>
+          <h1>{{ empleado.dni }}</h1>
+        </li>
+      </ul>
+      <h1 class="social" class="datosperfil">Direccion:</h1>
+      <h1>{{ empleado.direccion }}</h1>
+      
+      
+    </div>
+  </div>
+</div>

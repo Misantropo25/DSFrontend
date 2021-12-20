@@ -1,0 +1,94 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Editar Servicio</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/servicios">
+                <i class="fas fa-arrow-circle-left"> Volver</i>
+            </button>
+        </div>
+  
+        <br />
+        <br />
+        <div class="s">
+            <form class="fs-6">
+                <div class="form-outline mb-4">
+                    <input disabled type="number" id="id" class="form-control" value={{servicio.id}} #id />
+                    <label class="form-label" for="id">Id Servicio</label>
+                </div>
+                <!-- DNI input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="nombreServicio" class="form-control" value="{{servicio.nombreServicio}}" #nombreServicio />
+                    <label class="form-label" for="nombreServicio">Nombre del Servicio</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                <input type="text" id="costoServicio" class="form-control" value="{{servicio.costoServicio}}" #costoServicio />
+                <label class="form-label" for="costoServicio">Costo Servicio</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="text" id="descripcion" class="form-control" value="{{servicio.descripcion}}" #descripcion />
+                    <label class="form-label" for="descripcion">Descripcion del Servicio</label>
+                </div>
+
+                <!-- Tipo de Documento de identificacion -->
+                <div class="input-group mb-3">
+                    <select class="form-select" id="estadoServicio" value="{{servicio.estadoServicio}" #estadoServicio>
+                        <option selected>Estado Servicio</option>
+                        <option id="estadoServicio" value="DNI">True</option>
+                        <option id="estadoServicio" value="null">False</option>
+                    </select>
+                    <label class="input-group-text" for="estadoServicio"
+                        >Seleccione</label
+                    >
+                    </div>
+                    <br />
+
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                    <input
+                    disabled
+                        type="text"
+                        id="fecCreacion"
+                        class="form-control"
+                        value="{{servicio.fecCreacion}}"
+                        #fecCreacion
+                    />
+                    <label class="form-label" for="fecCreacion"
+                        >Fecha de Creacion</label
+                    >
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="form-outline">
+                    <input
+                        type="date"
+                        id="fecExpiracion"
+                        class="form-control"
+                        value="{{servicio.fecExpiracion}}"
+                        #fecExpiracion
+                    />
+                    <label class="form-label" for="fecExpiracion"
+                        >Fecha de Expiracion</label
+                    >
+                    </div>
+                </div>
+                </div>
+                
+                <!-- Submit button -->
+                <a href="/inicioAdmin/id/servicios" class="btn btn-primary btn-lg mb-4" tabindex="-1" role="button" (click)="editarServicio(id.value, costoServicio.value, descripcion.value, estadoServicio.value, nombreServicio.value, fecExpiracion.value)"> Actualizar</a>
+        
+            </form>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  

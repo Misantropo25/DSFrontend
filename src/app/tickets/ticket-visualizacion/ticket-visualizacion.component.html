@@ -1,0 +1,63 @@
+<app-usuario-cliente-logeado-header></app-usuario-cliente-logeado-header>
+
+<br />
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <b class="fs-4">Nombre: {{ cliente.nombre }} </b>
+    </div>
+    <div class="col">
+      <b class="fs-4">ID: {{ cliente.id }}</b>
+    </div>
+    <div class="col-4">
+      <div class="nav justify-content-end">
+        <button
+          class="btn btn-outline-secondary"
+          [routerLink]="['/cliente/solicitar', id]"
+        >
+          <i class="far fa-plus-square"> Solicitar Ticket</i>
+        </button>
+      </div>
+    </div>
+    <br />
+  </div>
+  <hr />
+  <br />
+
+  <div class="contenedor-Tablas">
+    <table class="table table-hover fs-6">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Descripcion Ticket</th>
+          <th scope="col">Estado Ticket</th>
+          <th scope="col">Tipo de Solicitud</th>
+          <th scope="col">Ver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of listaDeTickets">
+          <td>{{ ticket.id }}</td>
+          <td>
+            {{ ticket.descripcionTicket }}
+          </td>
+          <td>{{ estadoTicket(ticket.estadoTicket) }}</td>
+          <td>{{ ticket.tipoDeSolicitud }}</td>
+          <td>
+            <a
+              ><button
+                [routerLink]="['/cliente/visualizar/id', ticket.id]"
+                class="btn btn-outline-secondary"
+              >
+                <i class="far fa-eye"></i> Ver
+              </button></a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class=""></div>
+  </div>
+</div>
+<div class="container contenedor mt-5"></div>

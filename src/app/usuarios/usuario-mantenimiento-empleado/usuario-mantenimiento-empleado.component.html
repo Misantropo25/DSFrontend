@@ -1,0 +1,192 @@
+<!-- <div>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+             <br><br>
+             <h1 class="display-5"><strong><em>Empleado</em></strong></h1>
+             <br>
+           <h2>Información</h2>
+           <br>
+    <div class="col">
+            <ul>
+        <li *ngFor="let empleado of empleados">
+              <h2>Usuarios</h2>
+              <p><strong>Nombre</strong></p>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="statictext" value="{{empleado.Nombre}}">
+              </div> 
+              <P><strong>Contraseña</strong></P>
+              <div class="col-sm-10">
+                <input type="password" readonly class="form-control-plaintext" id="statictext" value="{{empleado.Contrasenia}}">
+              </div> 
+              <p><strong>Apellido Paterno</strong></p>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="statictext" value="{{empleado.ApePaterno}}">
+              </div> 
+              <p><strong>Apellido Materno</strong></p>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="statictext" value="{{empleado.ApeMaterno}}">
+              </div> 
+              <p><strong>DNI</strong></p>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="statictext" value="{{empleado.DNI}}">
+              </div> 
+              <p><strong>Sexo</strong></p>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="statictext" value="{{empleado.Sexo}}">
+              </div> 
+              <p><strong>Numero de telefono</strong></p>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="statictext" value="{{empleado.NumTelefono}}">
+              </div> 
+              <p><strong>Email</strong></p>
+              <div class="col-sm-10">
+                <input type="email" readonly class="form-control-plaintext" id="statictext" value="{{empleado.Email}}">
+              </div> 
+              <p><strong>Direccion</strong></p>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="statictext" value="{{empleado.Direccion}}">
+              </div> 
+              <p><strong>Area</strong></p>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="statictext" value="{{empleado.Area}}">
+              </div>            
+        </li>
+    </ul> 
+  </div>
+  <form (ngSubmit)="agregarNuevoEmpleado($event)" >
+    <div class="mb-3">
+        <label for="NomUsuario" class="form-label">Nombre Usuario</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Nombre Usuario" 
+            id="NomUsuario"
+            name="empleado.NomUsuario"
+            [(ngModel)]="nuevoEmpleado.NomUsuario"
+        />
+    </div>
+    
+    <div class="mb-3">
+      <label for="productos" class="form-label">Contrasenia</label>
+      <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Contraseña" 
+          id="productos"
+          name="empleado.Contrasenia"
+          [(ngModel)]="nuevoEmpleado.Contrasenia"
+      />
+  </div>
+  <div class="mb-3">
+    <label for="Nombre" class="form-label">Nombre</label>
+    <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Nombre Nombre" 
+        id="Nombre"
+        name="empleado.Nombre"
+        [(ngModel)]="nuevoEmpleado.Nombre"
+    />
+   
+</div>
+<div class="mb-3">
+  <label for="ApePaterno" class="form-label">Apellido Paterno</label>
+  <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Apellido Paterno" 
+      id="ApePaterno"
+      name="empleado.ApePaterno"
+      [(ngModel)]="nuevoEmpleado.ApePaterno"
+  />
+</div>
+
+<div class="mb-3">
+  <label for="ApeMaterno" class="form-label">Apellido Materno</label>
+  <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Apellido Materno" 
+      id="ApeMaterno"
+      name="empleado.ApeMaterno"
+      [(ngModel)]="nuevoEmpleado.ApeMaterno"
+  />
+</div>
+
+<div class="mb-3">
+  <label for="DNI" class="form-label">DNI</label>
+  <input 
+      type="text" 
+      class="form-control" 
+      placeholder="DNI" 
+      id="DNI"
+      name="empleado.DNI"
+      [(ngModel)]="nuevoEmpleado.DNI"
+  />
+</div>
+
+<div class="mb-3">
+  <label for="Sexo" class="form-label">Sexo </label>
+  <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Sexo (M o F)" 
+      id="Sexo"
+      name="empleado.Sexo"
+      [(ngModel)]="nuevoEmpleado.Sexo"
+  />
+</div>
+
+<div class="mb-3">
+  <label for="NumTelefono" class="form-label">Numero de Telefono </label>
+  <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Numero de Telefono " 
+      id="NumTelefono"
+      name="empleado.NumTelefono"
+      [(ngModel)]="nuevoEmpleado.NumTelefono"
+  />
+</div>
+
+<div class="mb-3">
+  <label for="Email" class="form-label">Email </label>
+  <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Email" 
+      id="Email"
+      name="empleado.Email"
+      [(ngModel)]="nuevoEmpleado.Email"
+  />
+</div>
+
+<div class="mb-3">
+  <label for="Direccion" class="form-label">Direccion </label>
+  <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Direccion" 
+      id="Direccion"
+      name="empleado.Direccion"
+      [(ngModel)]="nuevoEmpleado.Direccion"
+  />
+</div>
+
+<div class="mb-3">
+  <label for="Area" class="form-label">Area </label>
+  <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Area" 
+      id="Area"
+      name="empleado.Area"
+      [(ngModel)]="nuevoEmpleado.Area"
+  />
+</div>
+    <button type="submit" class="btn btn-primary">Agregar</button> 
+</form>
+<br>
+  </div>
+  -->

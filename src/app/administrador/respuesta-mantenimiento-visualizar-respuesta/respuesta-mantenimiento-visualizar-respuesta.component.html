@@ -1,0 +1,34 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Ver Respuesta</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/respuestas">
+                <i class="fas fa-arrow-circle-left">Volver</i>
+            </button>
+        </div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row fs-6" *ngIf="respuesta">
+              <div class="col-md-7 mx-auto">
+                  <div class="card" style="width: 100%;">
+                      <div class="card-header text-center">
+                        Informacion de la Respuesta del Ticket
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>ID: </b>{{respuesta.id}}</li>
+                        <li class="list-group-item"><b>Contenido: </b>{{respuesta.contenido}}</li>
+                        <li class="list-group-item"><b>Empleado que respondio: </b>{{respuesta.empleadoRespondio}}</li>
+                        <li class="list-group-item"><b>Ticket que respondio: </b>{{respuesta.ticketRespondio}}</li>
+                      </ul>
+                      
+                    </div>
+              </div>
+          </div>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+  

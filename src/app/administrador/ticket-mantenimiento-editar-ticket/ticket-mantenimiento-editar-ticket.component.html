@@ -1,0 +1,109 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Editar Ticket</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/tickets">
+                <i class="fas fa-arrow-circle-left"> Volver</i>
+            </button>
+        </div>
+  
+        <br />
+        <br />
+        <div class="s">
+            <form class="fs-6">
+                <!-- monto input -->
+                <div class="form-outline mb-4">
+                    <input disabled type="number" id="id" value={{ticket.id}} class="form-control" #id />
+                    <label class="form-label" for="id">Id</label>
+                </div>
+                <!-- monto input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="descripcionTicket" value={{ticket.descripcionTicket}} class="form-control" #descripcionTicket />
+                    <label class="form-label" for="descripcionTicket">Descripcion del ticket</label>
+                </div>
+
+                <!-- Estado Pago identificacion -->
+                <div class="input-group mb-3">
+                    <select class="form-select" id="estadoTicket" value="{{ticket.estadoTicket}" #estadoTicket>
+                        <option disabled selected>{{ticket.estadoTicket}}</option>
+                        <option id="estadoTicket" value="false">Falta responder</option>
+                        <option id="estadoTicket" value="true">Ya se respondio</option>
+                    </select>
+                    <label class="input-group-text" for="estadoTicket"
+                        >Seleccione el estado del ticket</label
+                    >
+                    </div>
+                    <br />
+
+                <!-- Estado Pago identificacion -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="tipoDeSolicitud" value={{ticket.tipoDeSolicitud}} class="form-control" #tipoDeSolicitud />
+                    <label class="form-label" for="tipoDeSolicitud">Tipo de Solicitud</label>
+                </div>
+                <div class="input-group mb-3">
+                    <select class="form-select" id="tipoDeSolicitud" value="{{ticket.tipoDeSolicitud}" #tipoDeSolicitud>
+                        <option disabled selected>{{ticket.estadoTicket}}</option>
+                        <option id="tipoDeSolicitud" value="Reclamo">Reclamo</option>
+                        <option id="tipoDeSolicitud" value="Tecnica">Tecnica</option>
+                        <option id="tipoDeSolicitud" value="Consulta">Consulta</option>
+                    </select>
+                    <label class="input-group-text" for="tipoDeSolicitud"
+                        >Seleccione el estado del ticket</label
+                    >
+                    </div>
+                    <br />
+
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="form-outline">
+                        <input
+                            disabled
+                            type="text"
+                            id="fecCreacion"
+                            class="form-control"
+                            value="{{ticket.fecCreacion}}"
+                            #fecCreacion
+                        />
+                        <label class="form-label" for="fecCreacion"
+                            >Fecha limite para realizar el pago</label
+                        >
+                        </div>
+                    </div>
+            
+                    <div class="col">
+                        <div class="form-outline">
+                        <input
+                            type="date"
+                            id="fecFinalizacion"
+                            class="form-control"
+                            value="{{ticket.fecFinalizacion}}"
+                            #fecFinalizacion
+                        />
+                        <label class="form-label" for="fecFinalizacion"
+                            >Fecha en que se realizo el pago</label
+                        >
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="form-outline mb-4">
+                    <input disabled type="text" id="clienteSolicito" value={{ticket.clienteSolicito}} class="form-control" #clienteSolicito />
+                    <label class="form-label" for="clienteSolicito">Cliente que solicito</label>
+                </div>
+
+
+                <!-- Submit button -->
+                <a href="/inicioAdmin/id/tickets" class="btn btn-primary btn-lg mb-4" tabindex="-1" role="button" (click)="editarTicket(id.value,estadoTicket.value,descripcionTicket.value,tipoDeSolicitud.value,fecFinalizacion.value)"> Actualizar Ticket</a>
+        
+            </form>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  

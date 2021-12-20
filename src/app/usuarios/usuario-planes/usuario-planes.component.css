@@ -1,0 +1,19 @@
+.imagen{
+    width: 200px;
+    height: 201px;
+}
+
+.card-border{
+    border: solid 2px black;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+
+.card-border:hover{
+    transform: scale(1.05);
+}
+
+.contendorss{
+    width: 100px;
+}

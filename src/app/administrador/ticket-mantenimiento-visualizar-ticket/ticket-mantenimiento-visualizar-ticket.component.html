@@ -1,0 +1,38 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Ver Ticket</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/tickets">
+                <i class="fas fa-arrow-circle-left">Volver</i>
+            </button>
+        </div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row fs-6" *ngIf="ticket">
+              <div class="col-md-7 mx-auto">
+                  <div class="card" style="width: 100%;">
+                      <div class="card-header text-center">
+                        Informacion del Ticket
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item" ><b>ID: </b>{{ticket.id}}</li>
+                        <li class="list-group-item"><b>Descripcion del Ticket: </b>{{ ticket.descripcionTicket }}</li>
+                        <li class="list-group-item"><b>Estado del Ticket: </b>{{ticket.estadoTicket}}</li>
+                        <li class="list-group-item"><b>Fecha de creacion: </b>{{ticket.fecCreacion}}</li>
+                        <li class="list-group-item"><b>Fecha en que se contesto: </b>{{ticket.fecFinalizacion}}</li>
+                        <li class="list-group-item"><b>Tipo de solicitud: </b>{{ticket.tipoDeSolicitud}}</li>
+                        <li class="list-group-item"><b>Cliente que solicito: </b>{{ticket.clienteSolicito.nombre}}</li>
+                      </ul>
+                      
+                    </div>
+              </div>
+          </div>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+  
+

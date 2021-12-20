@@ -1,0 +1,39 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Crear Pago</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/pagos">
+                <i class="fas fa-arrow-circle-left"> Volver</i>
+            </button>
+        </div>
+  
+        <br />
+        <br />
+        <div class="s">
+            <form class="fs-6">
+                <!-- DNI input -->
+                <div class="form-outline mb-4">
+                    <input type="number" id="monto" class="form-control" #monto />
+                    <label class="form-label" for="monto">Monto del Pago</label>
+                </div>
+
+
+                <!-- <div class="form-outline mb-4">
+                    <input type="text" id="correspondeContrato" class="form-control" #correspondeContrato />
+                    <label class="form-label" for="correspondeContrato">Corresponde Contrato</label>
+                </div> -->
+
+                <!-- Submit button -->
+                <a href="/inicioAdmin/id/pagos" class="btn btn-primary btn-lg mb-4" tabindex="-1" role="button" (click)="crearPago(monto.value)"> Crear Pago</a>
+        
+            </form>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,116 @@
+<app-usuario-cliente-logeado-header></app-usuario-cliente-logeado-header>
+
+<div class="container row rounded bg-white mt-5 mb-5">
+  <div class="col-md-4 border-right">
+    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+      <img
+        class="rounded-circle mt-5"
+        width="150px"
+        src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
+      /><span class="font-weight-bold"></span><span class="text-black-50"></span
+      ><span> </span>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="p-3 py-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="text-right">Perfil del Cliente</h1>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-6">
+          <label class="labels">Nombre</label>
+          <h4>{{ cliente.nombre }}</h4>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-6">
+          <label class="labels">Apellido Paterno</label>
+          <h4>{{ cliente.apePaterno }}</h4>
+        </div>
+        <div class="col-md-6">
+          <label class="labels">Apellido Materno</label>
+          <h4>{{ cliente.apeMaterno }}</h4>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <label class="labels">Telefono Celular</label>
+          <h4>{{ cliente.numTelefono }}</h4>
+        </div>
+        <div class="col-md-12">
+          <label class="labels">Email</label>
+          <h4>{{ cliente.email }}</h4>
+        </div>
+        <div class="col-md-12">
+          <label class="labels">Sexo</label>
+          <h4>{{ cliente.sexo }}</h4>
+        </div>
+        <div class="col-md-12">
+          <label class="labels">Direccion</label>
+          <h4>{{ cliente.direccion }}</h4>
+        </div>
+        <div class="col-md-12">
+          <label class="labels">DNI</label>
+          <h4>{{ cliente.dni }}</h4>
+        </div>
+      </div>
+      <div class="mt-5 text-center">
+        <!-- <button
+          class="btn btn-primary profile-button"
+          type="button"
+          routerLink="/cliente/personal/modificar"
+          routerLinkActive="active"
+        >
+          Modificar Perfil
+        </button> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="p-3 py-5">
+      <hr />
+      <div
+        class="d-flex justify-content-between align-items-center experience"
+        routerLink="/cliente/contrato"
+        routerLinkActive="active"
+      >
+        <h4>Ver Contratos</h4>
+        <span class="border px-3 p-1 add-experience"
+          ><i class="fa fa-plus"></i>&nbsp;Contratos</span
+        >
+      </div>
+      <br />
+      <hr />
+      <div
+        class="d-flex justify-content-between align-items-center experience"
+        
+        [routerLink]="['/cliente/planes',id]"
+        routerLinkActive="active"
+      >
+      <!-- routerLink="/cliente/planes" -->
+        <h4>Ver Planes</h4>
+        <span class="border px-3 p-1 add-experience"
+          ><i class="fa fa-plus"></i>&nbsp;Planes</span
+        >
+      </div>
+      <br />
+      <hr />
+      <div
+        class="d-flex justify-content-between align-items-center experience"
+        
+        [routerLink]="['/cliente/tickets',id]"
+        routerLinkActive="active"
+      >
+      <!-- routerLink="/cliente/tickets" -->
+        <h4>Ver Tickets</h4>
+        <span class="border px-3 p-1 add-experience"
+          ><i class="fa fa-plus"></i>&nbsp;Tickets</span
+        >
+      </div>
+      <br />
+      <hr />
+    </div>
+  </div>
+</div>

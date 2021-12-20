@@ -1,0 +1,139 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Editar Contrato</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end">
+          <button
+            class="btn btn-outline-secondary"
+            routerLink="/inicioAdmin/id/contratos"
+          >
+            <i class="fas fa-arrow-circle-left"> Volver</i>
+          </button>
+        </div>
+  
+        <br />
+        <br />
+        <form class="fs-6">
+            <div class="form-outline mb-4">
+                <input type="text" id="id" class="form-control" disabled value="{{contrato.id}}" #id />
+                <label class="form-label" for="id">Id Contrato</label>
+              </div>
+          <div class="form-outline mb-4">
+            <input type="text" id="descripcion" class="form-control" value="{{contrato.descripcion}}" #descripcion />
+            <label class="form-label" for="descripcion">Descripcion</label>
+          </div>
+          <!-- Direccion - Distrito -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input
+                  type="text"
+                  id="direccion"
+                  class="form-control"
+                  value="{{contrato.direccion}}"
+                  #direccion
+                />
+                <label class="form-label" for="direccion"
+                  >Direccion</label
+                >
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="form-outline">
+                <input
+                  type="text"
+                  id="distritoDireccion"
+                  class="form-control"
+                  value="{{contrato.distritoDireccion}}"
+                  #distritoDireccion
+                />
+                <label class="form-label" for="distritoDireccion"
+                  >Distrito Direccion</label
+                >
+              </div>
+            </div>
+          </div>
+  
+          <!-- Modo de Pago input-->
+          <div class="input-group mb-3">
+            <select class="form-select" id="modDePago"  #modDePago>
+              <option disabled selected> {{contrato.modDePago}}</option>
+              <option id="modDePago" value="M">Mensual</option>
+              <option id="modDePago" value="F">Semestral</option>
+              <option id="modDePago" value="O">Anual</option>
+            </select>
+            <label class="input-group-text" for="modDePago">Seleccione</label>
+          </div>
+          <br />
+
+          <!-- Modo de Pago input-->
+          <div class="input-group mb-3">
+            <select class="form-select" id="estadoContrato" value="estadoContrato(contrato.estadoContrato)" #estadoContrato>
+              <option disabled selected> {{contrato.estadoContrato}} </option>
+              <option id="estadoContrato" value="M">True</option>
+              <option id="estadoContrato" value="F">False</option>
+            </select>
+            <label class="input-group-text" for="estadoContrato">Seleccione</label>
+          </div>
+          <br />
+
+          <!-- refDireccion input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="fecCreacion" class="form-control" value="{{contrato.fecCreacion}}" #fecCreacion />
+            <label class="form-label" for="fecCreacion">Fecha de Creacion</label>
+          </div>
+
+          <!-- refDireccion input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="fecFinalizacion" class="form-control" value="{{contrato.fecFinalizacion}}" #fecFinalizacion />
+            <label class="form-label" for="fecFinalizacion">Fecha de Finalizacion</label>
+          </div>
+
+          <!-- refDireccion input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="refDireccion" class="form-control" value="{{contrato.refDireccion}}" #refDireccion />
+            <label class="form-label" for="refDireccion">Referencia de Direccion</label>
+          </div>
+  
+          <!-- restricciones input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="restricciones" class="form-control" value="{{contrato.restricciones}}" #restricciones/>
+            <label class="form-label" for="restricciones">Restricciones</label>
+          </div>
+  
+          <!-- tasaDeMora input -->
+          <div class="form-outline mb-4">
+            <input type="number" id="tasaDeMora" class="form-control" value="{{contrato.tasaDeMora}}" #tasaDeMora/>
+            <label class="form-label" for="tasaDeMora"
+              >Tasa de Mora</label
+            >
+          </div>
+
+          <!-- tasaDeMora input -->
+          <div class="form-outline mb-4">
+            <input type="number" disabled id="correspondeCliente" class="form-control" placeholder="{{contrato.correspondeCliente.nombre}}" #correspondeCliente/>
+            <label class="form-label" for="correspondeCliente"
+              >Corresponde Cliente </label
+            >
+          </div>
+
+          <!-- tasaDeMora input -->
+          <div class="form-outline mb-4">
+            <input type="number" disabled id="tieneServicio" class="form-control" placeholder="{{contrato.tieneServicio.nombreServicio}}" #tieneServicio/>
+            <label class="form-label" for="tieneServicio"
+              >Tiene Servicio</label
+            >
+          </div>
+
+          
+  
+  
+          <!-- Submit button -->
+          <a href="/inicioAdmin/id/contratos" class="btn btn-primary btn-lg mb-4" tabindex="-1" role="button" (click)="editarContrato(id.value,descripcion.value,direccion.value,distritoDireccion.value,estadoContrato.value,modDePago.value,refDireccion.value,restricciones.value,tasaDeMora.value)"> Registrar</a>
+    
+        </form>
+      </div>
+    </div>
+  </div>
+  

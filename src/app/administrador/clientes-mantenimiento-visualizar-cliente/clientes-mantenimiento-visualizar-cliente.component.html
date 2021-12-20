@@ -1,0 +1,43 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Ver Cliente</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/clientes">
+                <i class="fas fa-arrow-circle-left">Volver</i>
+            </button>
+        </div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row fs-6" *ngIf="cliente">
+              <div class="col-md-7 mx-auto">
+                  <div class="card" style="width: 100%;">
+                      <div class="card-header text-center">
+                        Informacion de cliente: {{cliente.nombre+" " + cliente.apePaterno +" " + cliente.apeMaterno
+                          }}
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>ID: </b>{{cliente.id}}</li>
+                        <li class="list-group-item"><b>Nombre: </b>{{cliente.nombre+" " + cliente.apePaterno +" " + cliente.apeMaterno
+                        }}</li>
+                        <li class="list-group-item"><b>DNI: </b>{{cliente.dni}}</li>
+                        <li class="list-group-item"><b>Direccion: </b>{{cliente.direccion}}</li>
+                        <li class="list-group-item"><b>Email: </b>{{cliente.email}}</li>
+                        <li class="list-group-item"><b>Nacionalidad: </b>{{cliente.nacionalidad}}</li>
+                        <li class="list-group-item"><b>Numero de Telefono: </b>{{cliente.numTelefono}}</li>
+                        <li class="list-group-item"><b>Sexo: </b>{{cliente.sexo}}</li>
+                        <li class="list-group-item"><b>Tipo Identificacion: </b>{{cliente.tipDocIdentificacion}}</li>
+                        <li class="list-group-item"><b>Nombre de Usuario: </b>{{cliente.nomUsuario}}</li>
+                        <li class="list-group-item"><b>Contraseña: </b>{{cliente.contrasenia}}</li>
+                      </ul>
+                      
+                    </div>
+              </div>
+          </div>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+  

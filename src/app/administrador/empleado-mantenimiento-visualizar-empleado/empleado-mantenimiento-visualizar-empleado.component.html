@@ -1,0 +1,44 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Ver Empleado</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end ">
+            <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/empleados">
+                <i class="fas fa-arrow-circle-left">Volver</i>
+            </button>
+        </div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row fs-6" *ngIf="empleado">
+              <div class="col-md-7 mx-auto">
+                  <div class="card" style="width: 100%;">
+                      <div class="card-header text-center">
+                        Informacion de cliente: {{empleado.nombre+" " + empleado.apePaterno +" " + empleado.apeMaterno
+                          }}
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>ID: </b>{{empleado.id}}</li>
+                        <li class="list-group-item"><b>Nombre: </b>{{empleado.nombre+" " + empleado.apePaterno +" " + empleado.apeMaterno
+                        }}</li>
+                        <li class="list-group-item"><b>DNI: </b>{{empleado.dni}}</li>
+                        <li class="list-group-item"><b>Area laboral: </b>{{empleado.area}}</li>
+                        <li class="list-group-item"><b>Direccion: </b>{{empleado.direccion}}</li>
+                        <li class="list-group-item"><b>Email: </b>{{empleado.email}}</li>
+                        <li class="list-group-item"><b>Nacionalidad: </b>{{empleado.nacionalidad}}</li>
+                        <li class="list-group-item"><b>Numero de Telefono: </b>{{empleado.numTelefono}}</li>
+                        <li class="list-group-item"><b>Sexo: </b>{{empleado.sexo}}</li>
+                        <li class="list-group-item"><b>Tipo Identificacion: </b>{{empleado.tipDocIdentificacion}}</li>
+                        <li class="list-group-item"><b>Nombre de Usuario: </b>{{empleado.nomUsuario}}</li>
+                        <li class="list-group-item"><b>Contraseña: </b>{{empleado.contrasenia}}</li>
+                      </ul>
+                      
+                    </div>
+              </div>
+          </div>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+  

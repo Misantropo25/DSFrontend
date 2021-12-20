@@ -1,0 +1,41 @@
+@import "../home/home.component.scss";
+.colordash {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+.font {
+      font-size: 30px;
+      text-align: center;
+      font-family: fantasy;
+      left: 80px;
+
+  }
+.posicion{
+    font-size: 4cm;
+    position: absolute;
+    top: 195px;
+    left: 138px;
+    color: azure;
+    font-family: monospace;
+}
+.posicion2{
+    font-size: 4cm;
+    position: absolute;
+    top: 195px;
+    left: 528px;
+    color: azure;
+    font-family: monospace;
+}
+.posicion3{
+    font-size: 4cm;
+    position: absolute;
+    top: 195px;
+    left: 908px;
+    color: azure;
+    font-family: monospace;
+
+}
+

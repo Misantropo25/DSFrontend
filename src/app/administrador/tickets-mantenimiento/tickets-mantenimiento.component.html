@@ -1,0 +1,56 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Tickets</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content position-relative mt-3 mx-5">
+      <div class="nav justify-content-end ">
+          <button class="btn btn-outline-secondary" routerLink="/inicioAdmin/id/agregarTicket">
+            <i class="far fa-plus-square"> Agregar Nuevo Ticket</i>
+          </button>
+      </div>
+
+      <br />
+      <br />
+      <table class="table table-hover fs-6">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Descripcion Ticket</th>
+            <th scope="col">Estado Ticket</th>
+            <th scope="col">Tipo de Solicitud</th>
+            <th scope="col">Ver</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ticket of lista">
+            <td>{{ ticket.id }}</td>
+            <td>
+              {{
+                ticket.descripcionTicket
+              }}
+            </td>
+            <td>{{ ticket.estadoTicket }}</td>
+            <td>{{ ticket.tipoDeSolicitud }}</td>
+            <td>
+              <a [routerLink]="['/inicioAdmin/id/visualizarTicket',ticket.id]"><button class="btn btn-outline-primary">
+                <i class="far fa-eye"></i> Ver
+              </button></a>
+            </td>
+            <td>
+              <a [routerLink]="['/inicioAdmin/id/editarTicket',ticket.id]"><button class="btn btn-outline-warning" >
+                <i class="far fa-edit"></i> Editar
+              </button></a>
+            </td>
+            <td>
+              <a href="/inicioAdmin/id/tickets"><button  (click)="eliminarTicket(ticket.id)" class="btn btn-outline-danger">
+                <i class="far fa-trash-alt"></i> Eliminar
+              </button>
+            </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Nuevo Contrato</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content position-relative mt-3 mx-5">
+        <div class="nav justify-content-end">
+          <button
+            class="btn btn-outline-secondary"
+            routerLink="/inicioAdmin/id/contratos"
+          >
+            <i class="fas fa-arrow-circle-left"> Volver</i>
+          </button>
+        </div>
+  
+        <br />
+        <br />
+        <form class="fs-6">
+          <div class="form-outline mb-4">
+            <input type="text" id="descripcion" class="form-control" #descripcion />
+            <label class="form-label" for="descripcion">Descripcion</label>
+          </div>
+          <!-- Direccion - Distrito -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input
+                  type="text"
+                  id="direccion"
+                  class="form-control"
+                  #direccion
+                />
+                <label class="form-label" for="direccion"
+                  >Direccion</label
+                >
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="form-outline">
+                <input
+                  type="text"
+                  id="distritoDireccion"
+                  class="form-control"
+                  #distritoDireccion
+                />
+                <label class="form-label" for="distritoDireccion"
+                  >Distrito Direccion</label
+                >
+              </div>
+            </div>
+          </div>
+  
+          <!-- Modo de Pago input-->
+          <div class="input-group mb-3">
+            <select class="form-select" id="modoDePago" #modoDePago>
+              <option disabled selected>Modo de Pago</option>
+              <option id="modoDePago" value="Mensual">Mensual</option>
+              <option id="modoDePago" value="Semestral">Semestral</option>
+              <option id="modoDePago" value="Anual">Anual</option>
+            </select>
+            <label class="input-group-text" for="modoDePago">Seleccione</label>
+          </div>
+          <br />
+
+          <!-- Cliente en contrato input-->
+          <div class="input-group mb-3">
+            <select class="form-select" id="clienteCorresponde" #clienteCorresponde>
+              <option disabled selected>Seleccione al cliente</option>
+              <option *ngFor="let cliente of listaClientes"  id="clienteCorresponde" value="{{cliente.id}}">{{cliente.nombre}}</option>
+            </select>
+            <label class="input-group-text" for="clienteCorresponde">Seleccione</label>
+          </div>
+          <br />
+
+          <!-- Servicio en contrato input-->
+          <div class="input-group mb-3">
+            <select  class="form-select servicioCorresponde" name="servicioCorresponde" id="servicioCorresponde" #servicioCorresponde>
+              <option disabled selected>Seleccione el servicio a contratar</option>
+              <option *ngFor="let servicio of listaServicios" id="servicioCorresponde" value="{{servicio.id}}">{{servicio.nombreServicio}}</option>
+            </select>
+            <label class="input-group-text" for="servicioCorresponde">Seleccione</label>
+          </div>
+          <br />
+  
+          <!-- refDireccion input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="refDireccion" class="form-control" #refDireccion />
+            <label class="form-label" for="refDireccion">Referencia de Direccion</label>
+          </div>
+  
+          <!-- restricciones input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="restricciones" class="form-control" #restricciones/>
+            <label class="form-label" for="restricciones">Restricciones</label>
+          </div>
+          
+          <!-- tasaDeMora input -->
+          <div class="form-outline mb-4">
+            <input type="number" id="tasaDeMora" class="form-control" #tasaDeMora/>
+            <label class="form-label" for="tasaDeMora"
+              >Tasa de Mora</label
+            >
+          </div>
+          
+          <div class="container row row-col-6">
+          
+          <!-- <a  class="btn btn-primary btn-lg mb-4 col-4" tabindex="-1" role="button" (click)="VerificarDatosIngresados(clienteCorresponde.value,servicioCorresponde.value)"> Validar los datos ingresados</a> -->
+          <a  href="/inicioAdmin/id/contratos" class="btn btn-primary btn-lg mb-4 col-4" tabindex="-1" role="button" (click)="crearContrato(descripcion.value,direccion.value,distritoDireccion.value,modoDePago.value,refDireccion.value,restricciones.value,tasaDeMora.value,clienteCorresponde.value,servicioCorresponde.value)"> Registrar Contrato</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+

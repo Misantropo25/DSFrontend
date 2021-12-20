@@ -1,0 +1,16 @@
+.contenedor-Cartas{
+    width: 600px;
+    margin-top: 2%;
+    margin-left: 27%;
+    margin-right: 30%;
+    }
+
+.imagen{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 300px;
+    height: 160px;
+}
+.contenedor{
+    height: 200px;
+}
